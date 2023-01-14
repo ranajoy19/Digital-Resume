@@ -18,13 +18,12 @@
   --mainBorderColor: var(--mainBorderColor-dark);
   --mainBgColor: var(--mainBgColor-dark);
 }
-.dark-theam{
-    --mainTextColor: var(--mainTextColor-light);
+.dark-theam {
+  --mainTextColor: var(--mainTextColor-light);
   --secondaryTextColor: var(--secondaryTextColor-light);
   --mainLinkColor: var(--mainLinkColor-light);
   --mainBorderColor: var(--mainBorderColor-light);
   --mainBgColor: var(--mainBgColor-light);
-
 }
 
 * {
@@ -72,9 +71,17 @@ li {
   font-weight: 300;
 }
 #profile-pic {
-  border-radius: 50%;
-  height: 150px;
+  border-radius: 30% 74%;
+  height: 300px;
   width: 308.2px;
+  object-fit: scale-down;
+  background-position: center center;
+  transition: transform 0.2s; /* Animation */
+}
+#profile-pic:hover {
+  transform: scale(
+    1.5
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 #email {
   color: var(--mainTextColor);
@@ -160,8 +167,8 @@ li {
   }
 
   #profile-pic {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
   }
 
   #wrapper--hero {
@@ -174,12 +181,11 @@ li {
   }
 }
 
-
-.theam-toggle{
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    position: absolute;
-    top: 32px;
-   right: 122px;
+.theam-toggle {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 32px;
+  right: 122px;
 }
